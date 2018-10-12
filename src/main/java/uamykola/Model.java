@@ -1,6 +1,7 @@
 package uamykola;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Model {
     public static final int START_MAX = 100;
@@ -8,11 +9,16 @@ public class Model {
     private int rangeMax;
     private int rangeMin;
     private int soughtValue;
+    private final Random random = new Random();
     private ArrayList<Integer> turnHistory = new ArrayList<Integer>();
 
     public Model() {
         rangeMax = START_MAX;
         rangeMin = START_MIN;
+    }
+
+    public int makeNumber() {
+        return random.nextInt(rangeMax - rangeMin + 1) + rangeMin;
     }
 
     public void setRangeMax(int rangeMax) {

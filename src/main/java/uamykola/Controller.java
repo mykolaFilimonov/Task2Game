@@ -1,13 +1,10 @@
 package uamykola;
 
 import java.util.Scanner;
-import java.util.Random;
-
 public class Controller {
 
     private Model model;
     private View view;
-    private final Random random = new Random();
     private int userTurn = -1;
 
     public Controller(Model model, View view) {
@@ -30,7 +27,7 @@ public class Controller {
 
     public void gameLauncher() {
         Scanner scan = new Scanner(System.in);
-        model.setSoughtValue(makeNumber());
+        model.setSoughtValue(model.makeNumber());
         while (model.getSoughtValue() != userTurn) {
             rangeOut();
             userTurn = userInputValue(scan);
@@ -43,9 +40,7 @@ public class Controller {
         historyOut();
     }
 
-    public int makeNumber() {
-        return random.nextInt(101);
-    }
+
 
     public int userInputValue(Scanner sc) {
         view.printMessage(View.GUESS_THE_NUMBER);
@@ -62,7 +57,7 @@ public class Controller {
             view.printMessage(View.CONGRATULATION);
             model.addTurn(userTurn);
         } else {
-            if (model.getRangeMax() < userTurn || model.getRangeMin() > userTurn) {
+            if (model.getRangeMax() <= userTurn || model.getRangeMin() >= userTurn) {
                 view.printMessage(View.OUT_RANGE);
             } else {
                 if (model.getSoughtValue() < userTurn) {
