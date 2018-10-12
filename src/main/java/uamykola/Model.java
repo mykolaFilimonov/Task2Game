@@ -17,9 +17,6 @@ public class Model {
         rangeMin = START_MIN;
     }
 
-    public int makeNumber() {
-        return random.nextInt(rangeMax - rangeMin + 1) + rangeMin;
-    }
 
     public void setRangeMax(int rangeMax) {
         this.rangeMax = rangeMax;
@@ -29,8 +26,8 @@ public class Model {
         this.rangeMin = rangeMin;
     }
 
-    public void setSoughtValue(int soughtValue) {
-        this.soughtValue = soughtValue;
+    public void setSoughtValue(int rangeMax, int rangeMin) {
+        this.soughtValue = random.nextInt(rangeMax - rangeMin + 1) + rangeMin;
     }
 
     public void addTurn(int turn) {

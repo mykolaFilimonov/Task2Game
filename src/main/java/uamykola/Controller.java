@@ -27,7 +27,7 @@ public class Controller {
 
     public void gameLauncher() {
         Scanner scan = new Scanner(System.in);
-        model.setSoughtValue(model.makeNumber());
+        model.setSoughtValue(Model.START_MAX, Model.START_MIN);
         while (model.getSoughtValue() != userTurn) {
             rangeOut();
             userTurn = userInputValue(scan);
