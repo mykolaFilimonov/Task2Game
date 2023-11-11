@@ -7,11 +7,43 @@
 
   <groupId>uamykola</groupId>
   <artifactId>game</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
+  <packaging>jar</packaging>
 
-  <name>game</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <name>bring</name>
+  <description>
+    Bring is a custom web framework that combines HTTP request handling with a Dependency Injection
+    container.
+  </description>
+  <url>https://github.com/bobocode-breskul/bring</url>
+
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Ruslan Hladchenko</name>
+      <email>rugladchenko@gmail.com</email>
+      <organization>Hladchenko.com</organization>
+      <organizationUrl>https://hladchenko.com/</organizationUrl>
+    </developer>
+    <developer>
+      <name>Roman Pryshchepa</name>
+      <email>roman.pryshchepa@gmail.com</email>
+      <organization>PE Roman Pryshchepa</organization>
+      <organizationUrl>https://www.linkedin.com/in/roman-pryshchepa/</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/bobocode-breskul/bring.git</connection>
+    <developerConnection>scm:git:ssh://github.com:bobocode-breskul/bring.git</developerConnection>
+    <url>https://github.com/bobocode-breskul/bring/tree/master</url>
+  </scm>
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
