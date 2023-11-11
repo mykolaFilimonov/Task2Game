@@ -8,7 +8,9 @@ public class ControllerTest extends TestCase {
   @Test
   public void testCheckOfTurn() {
     var controller = new Controller();
-    controller.gameLauncher();
-    controller.checkOfTurn(10);
+    Model model = controller.getModel();
+    model.setSoughtValue(Model.START_MAX, Model.START_MIN);
+    System.out.println(model.getSoughtValue());
+    controller.checkOfTurn(model.getSoughtValue());
   }
 }

@@ -12,6 +12,10 @@ public class Controller {
         view = new View();
     }
 
+    public Model getModel() {
+        return model;
+    }
+
     public void historyOut() {
         String historyTurns = "Your Turns: ";
         for (Integer turn : model.getTurnHistory()) {
