@@ -17,6 +17,6 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertThat( true ).isTrue();
+        assertThat( false ).isTrue();
     }
 }
