@@ -1,9 +1,9 @@
 package uamykola;
 
-import junit.framework.TestCase;
-import org.junit.Test;
 
-public class ControllerTest extends TestCase {
+import org.junit.jupiter.api.Test;
+
+public class ControllerTest {
 
   @Test
   public void testCheckOfTurn() {
